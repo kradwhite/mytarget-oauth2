@@ -30,7 +30,8 @@ $oauth2 = new Oauth2();
 $oauth2 = new Oauth2([
     // по умолчанию false. Если true, запросы будут отправляться к песочнице myTarget.
     'sandbox' => true,
-    // по умолчанию true. Если true, ответом на запросы к myTarget будет ассоциативный массив, в противном случае объект.
+    // по умолчанию true. Если true, ответом на запросы к myTarget будет ассоциативный массив, 
+    // в противном случае объект.
     'assoc' => false,
     // по умолчанию false. Включает опцию debug http://docs.guzzlephp.org/en/stable/request-options.html#debug.
     'debug' => true,
@@ -40,7 +41,10 @@ $oauth2 = new Oauth2([
 $token = $oauth2->clientCredentialsGrant('client_id', 'client_secret')->request();
 
 // получение токена агенства
-$token = $oauth2->agencyCredentialsGrant('client_id', 'client_secret', 'agency_client_name')->request();
+$token = $oauth2->agencyCredentialsGrant(
+    'client_id',
+    'client_secret',
+    'agency_client_name')->request();
 
 // получение токена клиента|менеджера агенства
 $token = $oauth2->agencyCredentialsGrant(
@@ -59,7 +63,10 @@ $code = $oauth2->authorize('client_id', 'state', $scopes)->request();
 $token = $oauth2->authorizationCodeGrant($code, 'client_id')->request();
 
 // обновление токена
-$tokenWithNewAccessToken = $oauth2->refreshToken('refresh_token', 'client_id', 'client_secret')->request();
+$tokenWithNewAccessToken = $oauth2->refreshToken(
+    'refresh_token',
+    'client_id',
+    'client_secret')->request();
 
 // удаление токена
 $oauth2->deleteToken('client_id', 'client_sercret')->request();
