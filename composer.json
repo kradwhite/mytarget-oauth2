@@ -1,0 +1,51 @@
+{
+    "name": "kradwhite/my-target-oauth2",
+    "type": "library",
+    "description": "MyTarget oauth api library",
+    "keywords": [
+        "kradwhite",
+        "myTarget",
+		"api",
+        "oauth2",
+        "token"
+    ],
+    "homepage": "https://gitlab.com/kradwhite/my-target-oauth2",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "kradwhite",
+            "email": "kradwhite@mail.ru",
+            "homepage": "https://gitlab.com/kradwhite",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "~7.0",
+        "guzzlehttp/guzzle": "^6.3",
+        "monolog/monolog": "^2.0"
+    },
+    "require-dev": {
+        "codeception/codeception": "^2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "kradwhite\\myTarget\\api\\oauth2\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "kradwhite\\myTarget\\api\\oauth2\\tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "./codecept run unit"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
