@@ -33,7 +33,8 @@ $oauth2 = new Oauth2([
     // по умолчанию true. Если true, ответом на запросы к myTarget будет ассоциативный массив, 
     // в противном случае объект.
     'assoc' => false,
-    // по умолчанию false. Включает опцию debug http://docs.guzzlephp.org/en/stable/request-options.html#debug.
+    // по умолчанию false. Включает опцию debug 
+    // [http://docs.guzzlephp.org/en/stable/request-options.html#debug].
     'debug' => true,
 ]);
 
