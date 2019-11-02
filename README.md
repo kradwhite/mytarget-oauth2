@@ -34,7 +34,7 @@ $oauth2 = new Oauth2([
     // в противном случае объект.
     'assoc' => false,
     // по умолчанию false. Включает опцию debug 
-    // [http://docs.guzzlephp.org/en/stable/request-options.html#debug].
+    // http://docs.guzzlephp.org/en/stable/request-options.html#debug.
     'debug' => true,
 ]);
 
