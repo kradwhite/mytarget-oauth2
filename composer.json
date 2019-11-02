@@ -1,7 +1,7 @@
 {
-    "name": "kradwhite/my-target-oauth2",
+    "name": "kradwhite/mytarget-oauth2",
     "type": "library",
-    "description": "MyTarget oauth api library",
+    "description": "MyTarget oauth2 api library",
     "keywords": [
         "kradwhite",
         "myTarget",
@@ -9,13 +9,13 @@
         "oauth2",
         "token"
     ],
-    "homepage": "https://gitlab.com/kradwhite/my-target-oauth2",
+    "homepage": "https://github.com/kradwhite/mytarget-oauth2",
     "license": "BSD-3-Clause",
     "authors": [
         {
             "name": "kradwhite",
             "email": "kradwhite@mail.ru",
-            "homepage": "https://gitlab.com/kradwhite",
+            "homepage": "https://github.com/kradwhite",
             "role": "Developer"
         }
     ],
