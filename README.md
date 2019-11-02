@@ -21,7 +21,7 @@
 
 ## Использование
 ```php
-use kradwhite\mytarget\oauth2\Oauth2;
+use kradwhite\myTarget\oauth2\Oauth2;
 
 // инициализация клиента с конфигурацией по умолчанию
 $oauth2 = new Oauth2();
