@@ -21,8 +21,7 @@
     ],
     "require": {
         "php": "~7.0",
-        "guzzlehttp/guzzle": "^6.3",
-        "monolog/monolog": "^2.0"
+        "guzzlehttp/guzzle": "^6.3"
     },
     "require-dev": {
         "codeception/codeception": "^2.5"
