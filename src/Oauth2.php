@@ -25,6 +25,9 @@ class Oauth2
     /** @var Transport */
     private $transport;
 
+    /** @var array */
+    private $config;
+
     /**
      * Oauth2 constructor.
      * @param array $config
@@ -37,7 +40,27 @@ class Oauth2
             'http_errors' => false,
             'debug' => @$config['debug'],
         ]);
+        $this->config = $config;
         $this->transport = new Transport($client, $config);
+    }
+
+    /**
+     * @param string $client_id
+     * @param string $scopes
+     * @param string $state
+     * @param string $response_type
+     * @return string
+     */
+    public function authorizeLink(string $client_id, string $scopes, string $state = '', string $response_type = 'code'): string
+    {
+        $query = ['response_type' => $response_type, 'client_id' => $client_id, 'scope' => $scopes];
+        if ($state) {
+            $query['state'] = $state;
+        }
+        return 'https://'
+            . (isset($this->config['sandbox']) && $this->config['sandbox'] ? 'target-sandbox.my.com' : 'target.my.com')
+            . '/oauth2/authorize?'
+            . http_build_query($query);
     }
 
     /**
