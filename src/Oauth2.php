@@ -103,18 +103,6 @@ class Oauth2
     }
 
     /**
-     * Запрос на получение кода, который будет отправлен по адресу заданному параметром "redirect_uri" при регистрации клиента
-     * @param string $client_id
-     * @param string $state
-     * @param string $scopes
-     * @return Authorize
-     */
-    public function authorize(string $client_id, string $state, string $scopes): Authorize
-    {
-        return new Authorize($this->transport, $client_id, $state, $scopes);
-    }
-
-    /**
      * Обновление токена доступа
      * @param string $refresh_token
      * @param string $client_id

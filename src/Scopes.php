@@ -97,7 +97,7 @@ class Scopes
      */
     public static function allForClient(): string
     {
-        return implode(',', [self::read_ads, self::read_payments, self::create_ads]);
+        return self::common([self::read_ads, self::read_payments, self::create_ads]);
     }
 
     /**
@@ -106,7 +106,7 @@ class Scopes
      */
     public static function allForAgencyAndDelegate(): string
     {
-        return implode(',', [self::create_clients, self::read_clients, self::create_agency_payments]);
+        return self::common([self::create_clients, self::read_clients, self::create_agency_payments]);
     }
 
     /**
@@ -115,7 +115,7 @@ class Scopes
      */
     public static function allForManager(): string
     {
-        return implode(',', [self::read_payments, self::read_manager_clients, self::edit_manager_clients]);
+        return self::common([self::read_payments, self::read_manager_clients, self::edit_manager_clients]);
     }
 
     /**
@@ -124,6 +124,16 @@ class Scopes
      */
     public static function allForRead(): string
     {
-        return implode(',', [self::read_ads, self::read_payments, self::read_clients, self::read_manager_clients]);
+        return self::common([self::read_ads, self::read_payments, self::read_clients, self::read_manager_clients]);
+    }
+
+    /**
+     * Выборочные scopes
+     * @param array $scopes
+     * @return string
+     */
+    public static function common(array $scopes): string
+    {
+        return implode(',', $scopes);
     }
 }
