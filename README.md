@@ -88,5 +88,5 @@ $tokenWithNewAccessToken = $oauth2->refreshToken(
 
 ```php
 // удаление токена
-$oauth2->deleteToken('client_id', 'client_sercret', 'username')->request();
+$oauth2->deleteToken('client_id', 'client_secret', 'username')->request();
 ```
