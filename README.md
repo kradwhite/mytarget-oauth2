@@ -69,8 +69,12 @@ use kradwhite\myTarget\oauth2\Scopes;
 
 // в классе kradwhite\myTarget\oauth2\Scopes существует несколько методов с различными
 // вариантами прав и константы для своего набора прав.
-$scopes = Scopes::all();  
-$code = $oauth2->authorize('client_id', 'state', $scopes)->request();
+$scopes = Scopes::all();
+
+// ссылка для клиента с редиректом на авторизацию в myTarget с последующим редиректом
+// на redirect_uri указанном в приложении и отправкой кода
+$link = $oauth2->authorizeLink('client_id', $scopes, 'state');
+// обмен кода на токены доступа
 $token = $oauth2->authorizationCodeGrant($code, 'client_id')->request();
 ```
 
