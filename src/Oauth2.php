@@ -117,11 +117,11 @@ class Oauth2
      * При достижении лимита на количество токенов можно самостоятельно удалить все токены конкретного пользователя
      * @param string $client_id
      * @param string $client_secret
-     * @param string $username
+     * @param string $user_id
      * @return DeleteToken
      */
-    public function deleteToken(string $client_id, string $client_secret, string $username = ""): DeleteToken
+    public function deleteToken(string $client_id, string $client_secret, string $user_id = ""): DeleteToken
     {
-        return new DeleteToken($this->transport, $client_id, $client_secret, $username);
+        return new DeleteToken($this->transport, $client_id, $client_secret, $user_id);
     }
 }
