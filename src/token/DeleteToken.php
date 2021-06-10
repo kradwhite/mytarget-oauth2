@@ -53,7 +53,7 @@ class DeleteToken
     {
         $form_params = ['client_id' => $this->client_id, 'client_secret' => $this->client_secret];
         if ($this->user_id) {
-            $form_params['username'] = $this->user_id;
+            $form_params['user_id'] = $this->user_id;
         }
         return $this->transport->request('post', 'token/delete.json', ['form_params' => $form_params]);
     }
