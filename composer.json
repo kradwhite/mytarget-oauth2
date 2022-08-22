@@ -20,13 +20,14 @@
         }
     ],
     "require": {
-        "php": "~7.0",
-        "guzzlehttp/guzzle": "^7.3",
-        "ext-json": "*"
+        "php": "~8.1",
+        "guzzlehttp/guzzle": "^7.4.5",
+        "ext-json": "*",
+        "ext-dom": "*"
     },
     "require-dev": {
-        "codeception/codeception": "^4.0",
-        "codeception/module-asserts": "^1.0.0"
+        "codeception/codeception": "^5.0.2",
+        "codeception/module-asserts": "^2.0.1"
     },
     "autoload": {
         "psr-4": {
